@@ -1,46 +1,186 @@
-# Getting Started with Create React App
+# WebGL Developer Test
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern 3D web application built with React, Three.js, and WebGL technologies. This project demonstrates advanced 3D rendering capabilities with interactive model viewing, animations, and post-processing effects.
 
-## Available Scripts
+## 🚀 Features
 
-In the project directory, you can run:
+- **3D Model Viewer**: Interactive 3D model rendering with GLB format support
+- **Real-time Animations**: Smooth model animations with GSAP integration
+- **Post-processing Effects**: Bloom effects and environment lighting
+- **Responsive Design**: Modern UI with Tailwind CSS
+- **Scroll-based Interactions**: Dynamic 3D scene manipulation based on scroll position
+- **Performance Optimized**: Efficient rendering with React Three Fiber
 
-### `npm start`
+## 🛠️ Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **Frontend**: React 18 + TypeScript
+- **3D Graphics**: Three.js + React Three Fiber
+- **Animations**: GSAP (GreenSock)
+- **Styling**: Tailwind CSS + SASS
+- **Build Tool**: Create React App
+- **Package Manager**: npm/yarn
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 📦 Dependencies
 
-### `npm test`
+### Core Dependencies
+- `@react-three/fiber` - React renderer for Three.js
+- `@react-three/drei` - Useful helpers for React Three Fiber
+- `@react-three/postprocessing` - Post-processing effects
+- `three` - 3D graphics library
+- `gsap` - Professional animation library
+- `react` & `react-dom` - React framework
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Development Dependencies
+- `typescript` - Type safety
+- `tailwindcss` - Utility-first CSS framework
+- `eslint` & `prettier` - Code quality tools
 
-### `npm run build`
+## 🚀 Getting Started
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Prerequisites
+- Node.js (version 16 or higher)
+- npm or yarn package manager
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd WebGL-Developer-Test
+   ```
 
-### `npm run eject`
+2. **Install dependencies**
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+3. **Start the development server**
+   ```bash
+   npm start
+   # or
+   yarn start
+   ```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. **Open your browser**
+   Navigate to `http://localhost:3000` to view the application
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## 📁 Project Structure
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```
+src/
+├── components/
+│   ├── Loading/          # Loading component
+│   └── Model/            # 3D model component
+├── layout/
+│   ├── Configurator/     # Main app layout
+│   └── Scene/            # 3D scene setup
+├── App.tsx               # Main application component
+└── index.tsx             # Application entry point
 
-## Learn More
+public/
+└── model/
+    └── object.glb        # 3D model file
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🎮 Usage
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Basic Navigation
+- **Scroll Down**: The 3D scene rotates based on scroll position
+- **Mouse Interaction**: Orbit controls for camera manipulation
+- **Viewport**: Explore different sections of the application
+
+### 3D Scene Features
+- **Model Animation**: Automatic model animations on load
+- **Environment**: Night-time lighting preset
+- **Effects**: Bloom post-processing for enhanced visuals
+- **Particles**: Sparkle effects for atmosphere
+
+## 🧪 Testing
+
+Run the test suite:
+```bash
+npm test
+# or
+yarn test
+```
+
+## 🏗️ Building for Production
+
+Create a production build:
+```bash
+npm run build
+# or
+yarn build
+```
+
+## 🔧 Available Scripts
+
+- `npm start` - Start development server
+- `npm build` - Build for production
+- `npm test` - Run test suite
+- `npm run lint` - Run ESLint
+- `npm run eject` - Eject from Create React App (irreversible)
+
+## 🌟 Key Features Explained
+
+### 3D Model Rendering
+The application uses React Three Fiber to render 3D models with:
+- Automatic model loading from GLB files
+- Smooth animations and transitions
+- Optimized rendering performance
+
+### Scroll-based Interactions
+GSAP ScrollTrigger integration enables:
+- Dynamic 3D scene rotation based on scroll
+- Smooth, performant animations
+- Responsive user experience
+
+### Post-processing Pipeline
+Advanced visual effects including:
+- Bloom lighting effects
+- Environment-based lighting
+- Optimized rendering pipeline
+
+## 🎨 Customization
+
+### Adding New Models
+1. Place your GLB file in `public/model/`
+2. Update the model path in `src/components/Model/index.tsx`
+3. Adjust scale and rotation as needed
+
+### Modifying Effects
+- Edit post-processing effects in `src/layout/Scene/index.tsx`
+- Adjust lighting parameters in the Scene component
+- Modify animation timelines in the GSAP configuration
+
+## 🐛 Troubleshooting
+
+### Common Issues
+- **Model not loading**: Ensure the GLB file exists in the correct path
+- **Performance issues**: Check browser console for WebGL support
+- **Build errors**: Verify all dependencies are properly installed
+
+### Browser Compatibility
+- Chrome (recommended)
+- Firefox
+- Safari
+- Edge
+
+## 📝 License
+
+This project is private and proprietary.
+
+## 👨‍💻 Author
+
+**Evgenii Petrukhin**
+- Email: evgeniipetrukhin90@gmail.com
+
+## 🤝 Contributing
+
+This is a test project for WebGL development assessment. For questions or issues, please contact the author.
+
+---
+
+**Note**: This project demonstrates advanced WebGL and 3D web development capabilities using modern web technologies. It serves as a showcase for interactive 3D applications in the browser.
